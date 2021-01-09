@@ -35,8 +35,8 @@ public class Metadata implements Serializable {
         public String getAShareDescription() {
             return AShareDescription;
         }
-        public void setAShareDescription(String AShareDesciption) {
-            this.AShareDescription = AShareDesciption;
+        public void setAShareDescription(String AShareDescription) {
+            this.AShareDescription = AShareDescription;
         }
         public String getAShareIntroduction() {
             return AShareIntroduction;
@@ -80,34 +80,30 @@ public class Metadata implements Serializable {
             this.AShareBalanceSheet = AShareBalanceSheet;
         }
     }
-    public static class MacrographyTable{
-        private String GlobalMacrography;
-        private String ChineseMacrography;
-        private String IndustrialChain;
+    public static class MacrographyTable {
+        private String globalMacrography;
+        private String chineseMacrography;
+        private String industrialChain;
         public String getGlobalMacrography() {
-            return GlobalMacrography;
+            return globalMacrography;
         }
-
         public void setGlobalMacrography(String globalMacrography) {
-            GlobalMacrography = globalMacrography;
+            this.globalMacrography = globalMacrography;
         }
-
         public String getChineseMacrography() {
-            return ChineseMacrography;
+            return chineseMacrography;
         }
-
         public void setChineseMacrography(String chineseMacrography) {
-            ChineseMacrography = chineseMacrography;
+            this.chineseMacrography = chineseMacrography;
         }
-
         public String getIndustrialChain() {
-            return IndustrialChain;
+            return industrialChain;
         }
-
         public void setIndustrialChain(String industrialChain) {
-            IndustrialChain = industrialChain;
+            this.industrialChain = industrialChain;
         }
     }
+
     @Id
     private ObjectId id;
     @Field("type")
@@ -120,7 +116,6 @@ public class Metadata implements Serializable {
     private MacrographyTable macrographyTable;
     @Field("FinancialReportTable")
     private FinancialReportTable financialReportTable;
-
 
     public QuotationTable getQuotationTable() {
         return quotationTable;

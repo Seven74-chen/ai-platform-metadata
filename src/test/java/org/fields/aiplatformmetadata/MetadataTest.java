@@ -16,7 +16,7 @@ public class MetadataTest {
     MetadataDao metadataDao;
 
     @Test
-    public void read(){
+    public void readTest(){
         Metadata metadata = metadataDao.findAll();
         Assert.assertEquals("Incorrectly bound AShareEODPrices property", "wind_AShareEODPrices.py", metadata.getQuotationTable().getAShareEODPrices());
         Assert.assertEquals("Incorrectly bound CCommidityFuturesEODPrices property", "wind_CCommidityFuturesEODPrices.py", metadata.getQuotationTable().getCCommidityFuturesEODPrices());
@@ -35,7 +35,7 @@ public class MetadataTest {
         Assert.assertEquals("Incorrectly bound IndustrialChain property", "wind_IndustrialChain.py", metadata.getMacrographyTable().getIndustrialChain());
     }
     @Test
-    public void modifyAndRestore(){
+    public void modifyAndRestoreTest(){
         final String test = "test";
 
         String old = metadataDao.getAShareEODPrices();
@@ -83,7 +83,7 @@ public class MetadataTest {
         Assert.assertEquals("Incorrectly bound AShareBalanceSheet property", test, metadataDao.getAShareBalanceSheet());
         metadataDao.updateAShareBalanceSheet(old);
 
-        /*old = metadataDao.getGlobalMacrography();
+        old = metadataDao.getGlobalMacrography();
         metadataDao.updateGlobalMacrography(test);
         Assert.assertEquals("Incorrectly bound GlobalMacrography property", test, metadataDao.getGlobalMacrography());
         metadataDao.updateGlobalMacrography(old);
@@ -96,11 +96,6 @@ public class MetadataTest {
         old = metadataDao.getIndustrialChain();
         metadataDao.updateIndustrialChain(test);
         Assert.assertEquals("Incorrectly bound IndustrialChain property", test, metadataDao.getIndustrialChain());
-        metadataDao.updateIndustrialChain(old);*/
-    }
-
-    @Test
-    public void test(){
-        metadataDao.updateGlobalMacrography("test");
+        metadataDao.updateIndustrialChain(old);
     }
 }

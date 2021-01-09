@@ -12,6 +12,8 @@ public interface MetadataDao {
     void updateAShareCaseFlowSheet(String AShareCaseFlowSheet);
     void updateAShareBalanceSheet(String AShareBalanceSheet);
     void updateGlobalMacrography(String GlobalMacrography);
+    void updateChineseMacrography(String ChineseMacrography);
+    void updateIndustrialChain(String IndustrialChain);
 
     String getAShareEODPrices();
     String getCCommidityFuturesEODPrices();

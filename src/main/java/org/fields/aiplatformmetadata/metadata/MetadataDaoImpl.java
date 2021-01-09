@@ -75,7 +75,19 @@ public class MetadataDaoImpl implements MetadataDao{
 
     @Override
     public void updateGlobalMacrography(String GlobalMacrography) {
-        Update update = new Update().set("MacrographyTable.$.GlobalMacrography", GlobalMacrography);
+        Update update = new Update().set("MacrographyTable.$.globalMacrography", GlobalMacrography);
+        mongoTemplate.updateFirst(query, update, Metadata.class);
+    }
+
+    @Override
+    public void updateChineseMacrography(String ChineseMacrography) {
+        Update update = new Update().set("MacrographyTable.$.chineseMacrography", ChineseMacrography);
+        mongoTemplate.updateFirst(query, update, Metadata.class);
+    }
+
+    @Override
+    public void updateIndustrialChain(String IndustrialChain) {
+        Update update = new Update().set("MacrographyTable.$.industrialChain", IndustrialChain);
         mongoTemplate.updateFirst(query, update, Metadata.class);
     }
 
