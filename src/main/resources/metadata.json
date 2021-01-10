@@ -1,0 +1,26 @@
+[
+    {
+        "type": "metadata",
+        "QuotationTable":{
+            "AShareEODPrices": "wind_AShareEODPrices.py",
+            "CCommidityFuturesEODPrices": "wind_CCommidityFuturesEODPrices.py"
+        },
+        "DatasetTable":{
+            "AShareDescription": "wind_AShareDescription.py",
+            "AShareIntroduction": "wind_AShareIntroduction.py",
+            "AShareIndustriesClassCITICS": "wind_AShareIndustriesClassCITICS.py",
+            "AIndexMembers": "wind_AIndexMembers.py"
+        },
+        "MacrographyTable":{
+            "globalMacrography": "wind_GlobalMacrography.py",
+            "chineseMacrography": "wind_ChineseMacrography.py",
+            "industrialChain": "wind_IndustrialChain.py"
+        },
+        "FinancialReportTable":{
+            "AShareFinancialIndex": "wind_AShareFinancialIndex.py",
+            "AShareCaseFlowSheet": "wind_AShareCaseFlowSheet.py",
+            "AShareBalanceSheet": "wind_AShareBalanceSheet.py"
+        }
+        
+    }
+]
